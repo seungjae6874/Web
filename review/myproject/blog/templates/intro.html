@@ -1,0 +1,13 @@
+{% for intros in intro.all %}
+  <div>
+    <h1>닉네임 : {{intros.nick}}</h1>
+    <h1>학년 : {{intros.grade}}</h1>
+    <h1>{{intros.name}}</h1>
+    {% if intros.image %}
+    <h2>소개 사진: </h2>
+    <img src = "{{ intros.image.url }}" width ="400" height = "400">
+    {% endif %}
+    <br>
+  </div>
+
+{% endfor %}
